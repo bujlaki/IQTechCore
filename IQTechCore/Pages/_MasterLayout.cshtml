@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-<!-- Template by html.am -->
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -32,21 +31,45 @@
         </main>
 
         <nav id="nav">
-            <div class="innertube">
+            <div class="innerNav">
 
-                <ul id="menu">
+                <ul id="menu" class="tree-items">
                     <li>
-                        <input type="checkbox" checked="checked"/>
+                        <input type="checkbox" id="cb1" />
+                        <label for="cb1"></label>
                         @Html.ActionLink("Home", "Index", "Home")
                         <ul>
-                            <li>@Html.ActionLink("subItem1", "Index", "Home")</li>
-                            <li>@Html.ActionLink("subItem2", "Index", "Home")</li>
+                            <li>
+                                <input type="checkbox" id="cb1-1" />
+                                <label for="cb1-1"></label>
+                                @Html.ActionLink("subItem1", "Index", "Home")
+                            </li>
+                            <li>
+                                <input type="checkbox" id="cb1-2" />
+                                <label for="cb1-2"></label>
+                                @Html.ActionLink("subItem2", "Index", "Home")
+                            </li>
                         </ul>
                     </li>
-                    <li>@Html.ActionLink("About", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Index", "Home")</li>
+                    <li>
+                        <input type="checkbox" id="cb2" />
+                        <label for="cb2"></label>
+                        @Html.ActionLink("About", "Index", "Home")
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cb3" />
+                        <label for="cb3"></label>
+                        @Html.ActionLink("Contact", "Index", "Home")
+                    </li>
                 </ul>
-
+                <script>
+                    var menuLabels = document.querySelectorAll(".tree-items label");
+                    for (var i = 0, len = menuLabels.length; i < len; i++) {
+                        var submenu = menuLabels[i].nextElementSibling.nextElementSibling;
+                        menuLabels[i].style.visibility = 'hidden';
+                        if (submenu!=null && submenu.tagName == 'UL') menuLabels[i].style.visibility = 'visible';
+                    }
+                </script>
             </div>
         </nav>
 

@@ -19,7 +19,7 @@ body {
 .innerHeader {
     margin: 15px; /* Padding for content */
     margin-top: 0;
-    line-height: 60px;
+    line-height: 75px;
 }
 
 #header h1 {
@@ -45,6 +45,40 @@ main {
     width: 230px;
     margin-left: -100%;
     background: #E7E6E1;
+}
+
+.innerNav {
+    margin: 15px; /* Padding for content */
+}
+
+/*Tree menu handling*/
+.tree-items input[type=checkbox] {
+    display:none;
+}
+
+.tree-items input[type=checkbox] + label {
+    background-image: url("../images/rightarrow.png");
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+}
+
+.tree-items input[type=checkbox]:checked + label {
+    background-image: url("../images/downarrow.png");
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+}
+
+.tree-items li > ul {
+    display:none;
+}
+
+.tree-items input[type=checkbox]:checked + label + a + ul {
+    display:block;
+    padding-left:30px;
 }
 
 #footer {
@@ -81,4 +115,5 @@ nav ul {
 nav ul a {
     color: darkgreen;
     text-decoration: none;
+    font-size: 125%;
 }
