@@ -13,9 +13,8 @@
 <body>
 
     <header id="header">
-        <div class="innertube">
-            <h1>Header...</h1>
-            
+        <div class="innerHeader">
+            <h1>IQ Tech</h1>
         </div>
     </header>
 
@@ -34,10 +33,10 @@
 
         <nav id="nav">
             <div class="innertube">
-                <script src="~/js/masterMenu.js"></script>
 
                 <ul id="menu">
                     <li>
+                        <input type="checkbox" checked="checked"/>
                         @Html.ActionLink("Home", "Index", "Home")
                         <ul>
                             <li>@Html.ActionLink("subItem1", "Index", "Home")</li>
@@ -48,30 +47,6 @@
                     <li>@Html.ActionLink("Contact", "Index", "Home")</li>
                 </ul>
 
-                <h3>Left heading</h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                </ul>
-                <h3>Left heading</h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                </ul>
-                <h3>Left heading</h3>
-                <ul>
-                    <li><a href="#">Link 1</a></li>
-                    <li><a href="#">Link 2</a></li>
-                    <li><a href="#">Link 3</a></li>
-                    <li><a href="#">Link 4</a></li>
-                    <li><a href="#">Link 5</a></li>
-                </ul>
             </div>
         </nav>
 
