@@ -11,7 +11,7 @@ namespace IQTechCore.Pages
     {
         public void OnGet()
         {
-
+            
         }
     }
 }
