@@ -5,6 +5,7 @@
     <title>IQ Tech</title>
 
     <link rel="stylesheet" href="~/css/master.css" />
+    <link rel="stylesheet" href="~/css/mainmenu.css" />
 
     <script type="text/javascript" src="~/js/master.js"></script>
 </head>
@@ -14,8 +15,15 @@
     <header id="header">
         <div class="innerHeader">
             <h1>IQ Tech</h1>
+            <div class="headerLinksContainer">
+                <img class="headerLink" src="~/images/github32.png" />
+                <span>GitHub</span>
+            </div>
         </div>
+
     </header>
+
+    <hr class="horizontalSeparator" />
 
     <div id="wrapper">
 
@@ -24,7 +32,8 @@
                 <div class="innertube">
                     <h1>Heading</h1>
                     <p>
-                    <script>generateText(20)</script></p>
+                        <script>generateText(20)</script>
+                    </p>
                     @RenderBody()
                 </div>
             </div>
@@ -33,47 +42,12 @@
         <nav id="nav">
             <div class="innerNav">
                 @{ Html.RenderPartial("partialMainMenu"); }
-                <ul id="menu" class="tree-items">
-                    <li>
-                        <input type="checkbox" id="cb1" />
-                        <label for="cb1"></label>
-                        @Html.ActionLink("Home", "Index", "Home")
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="cb1-1" />
-                                <label for="cb1-1"></label>
-                                @Html.ActionLink("subItem1", "Index", "Home")
-                            </li>
-                            <li>
-                                <input type="checkbox" id="cb1-2" />
-                                <label for="cb1-2"></label>
-                                @Html.ActionLink("subItem2", "Index", "Home")
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="cb2" />
-                        <label for="cb2"></label>
-                        @Html.ActionLink("About", "Index", "Home")
-                    </li>
-                    <li>
-                        <input type="checkbox" id="cb3" />
-                        <label for="cb3"></label>
-                        @Html.ActionLink("Contact", "Index", "Home")
-                    </li>
-                </ul>
-                <script>
-                    var menuLabels = document.querySelectorAll(".tree-items label");
-                    for (var i = 0, len = menuLabels.length; i < len; i++) {
-                        var submenu = menuLabels[i].nextElementSibling.nextElementSibling;
-                        menuLabels[i].style.visibility = 'hidden';
-                        if (submenu!=null && submenu.tagName == 'UL') menuLabels[i].style.visibility = 'visible';
-                    }
-                </script>
             </div>
         </nav>
 
     </div>
+
+    <hr class="horizontalSeparator" />
 
     <footer id="footer">
         <div class="innertube">

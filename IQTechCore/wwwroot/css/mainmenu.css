@@ -1,0 +1,48 @@
+﻿/*Tree menu handling*/
+.tree-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.tree-items a {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+.tree-items a:hover {
+    color: #49ad8e;
+}
+
+.tree-items a.selected-item {
+    color: #49ad8e;
+}
+
+.tree-items input[type=checkbox] {
+    display: none;
+}
+
+.tree-items input[type=checkbox] + label {
+    background-image: url("../images/rightarrow.png");
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+}
+
+.tree-items input[type=checkbox]:checked + label {
+    background-image: url("../images/downarrow.png");
+    height: 16px;
+    width: 16px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+}
+
+.tree-items li > ul {
+    display: none;
+}
+
+.tree-items input[type=checkbox]:checked + label + a + ul {
+    display: block;
+    padding-left: 30px;
+}

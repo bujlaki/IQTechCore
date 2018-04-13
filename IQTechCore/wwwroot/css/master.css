@@ -22,6 +22,49 @@ body {
     line-height: 75px;
 }
 
+div.headerLinksContainer {
+    display: inline;
+    width: 20%;
+    height:64px;
+    float: right;
+    position:relative;
+}
+
+img.headerLink {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    /*left: 0;
+    right: 0;*/
+    margin: auto;
+}
+
+img.headerLink + span {
+    display: none;
+    width:100px;
+    height:16px;
+    position:relative;
+    top:20px;
+    left:32px;
+    color: #fff;
+    font-size:10px;
+    text-align:left;
+}
+
+img.headerLink:hover + span {
+    display: block;
+}
+
+.horizontalSeparator {
+    margin: 0;
+    height: 3px;
+    background-color: red;
+}
+
 #header h1 {
     display: inline-block;
     vertical-align:middle;
@@ -51,35 +94,6 @@ main {
     margin: 15px; /* Padding for content */
 }
 
-/*Tree menu handling*/
-.tree-items input[type=checkbox] {
-    display:none;
-}
-
-.tree-items input[type=checkbox] + label {
-    background-image: url("../images/rightarrow.png");
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-}
-
-.tree-items input[type=checkbox]:checked + label {
-    background-image: url("../images/downarrow.png");
-    height: 16px;
-    width: 16px;
-    display: inline-block;
-    padding: 0 0 0 0px;
-}
-
-.tree-items li > ul {
-    display:none;
-}
-
-.tree-items input[type=checkbox]:checked + label + a + ul {
-    display:block;
-    padding-left:30px;
-}
 
 #footer {
     clear: left;
@@ -104,16 +118,4 @@ main {
 
 p {
     color: #555;
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul a {
-    color: darkgreen;
-    text-decoration: none;
-    font-size: 125%;
 }
