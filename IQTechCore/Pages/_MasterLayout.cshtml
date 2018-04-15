@@ -15,9 +15,11 @@
     <header id="header">
         <div class="innerHeader">
             <h1>IQ Tech</h1>
+            <div class="headerBannerContainer">
+                <img class="headerBannerImage" src="~/images/banner7.png" />
+            </div>
             <div class="headerLinksContainer">
-                <img class="headerLink" src="~/images/github32.png" />
-                <span>GitHub</span>
+                <a href="http://www.github.com/bujlaki"><img class="headerLink" src="~/images/GitHub_Logo_White_small.png" /></a>
             </div>
         </div>
 
@@ -30,9 +32,8 @@
         <main>
             <div id="content">
                 <div class="innertube">
-                    <h1>Heading</h1>
                     <p>
-                        <script>generateText(20)</script>
+                        @*<script>generateText(20)</script>*@
                     </p>
                     @RenderBody()
                 </div>

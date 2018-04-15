@@ -20,14 +20,25 @@ body {
     margin: 15px; /* Padding for content */
     margin-top: 0;
     line-height: 75px;
+    position: relative;
+}
+
+div.headerBannerContainer {
+    display: inline;
+    height: 75px;
+    float: right;
+    position: absolute;
+    top:0;
 }
 
 div.headerLinksContainer {
     display: inline;
     width: 20%;
-    height:64px;
+    height:75px;
     float: right;
-    position:relative;
+    position:absolute;
+    top:0;
+    right:0;
 }
 
 img.headerLink {
@@ -38,8 +49,7 @@ img.headerLink {
     position: absolute;
     top: 0;
     bottom: 0;
-    /*left: 0;
-    right: 0;*/
+    right: 0;
     margin: auto;
 }
 
@@ -62,7 +72,7 @@ img.headerLink:hover + span {
 .horizontalSeparator {
     margin: 0;
     height: 3px;
-    background-color: red;
+    background-color: orangered;
 }
 
 #header h1 {
@@ -70,7 +80,8 @@ img.headerLink:hover + span {
     vertical-align:middle;
     margin: 0;
     font-family: "Arial Black", Gadget, sans-serif;
-    color:aliceblue;
+    color:lightblue;
+    font-size:125%;
 }
 
 main {
@@ -109,11 +120,18 @@ main {
 
 #content {
     margin-left: 230px; /* Same as 'nav' width */
+    min-height: 480px;
+    color: #495c6b;
 }
 
 .innertube {
     margin: 15px; /* Padding for content */
     margin-top: 0;
+}
+
+div.bkgImg {
+    display: inline-block;
+    float:right;
 }
 
 p {
