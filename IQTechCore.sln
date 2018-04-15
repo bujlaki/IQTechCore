@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27428.2027
+VisualStudioVersion = 15.0.27130.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IQTechCore", "IQTechCore\IQTechCore.csproj", "{27AF276B-7764-4C77-B814-8D75B7F74B0F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IQTechCore", "IQTechCore\IQTechCore.csproj", "{27AF276B-7764-4C77-B814-8D75B7F74B0F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

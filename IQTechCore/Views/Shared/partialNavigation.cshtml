@@ -1,0 +1,43 @@
+﻿@model IQTechCore.Views.Shared.partialNavigationModel
+@{
+}
+
+<ul id="menu" class="tree-items">
+    <li>
+        <input type="checkbox" id="cb1" />
+        <label for="cb1"></label>
+        <a href="/">Home</a>
+        @*<ul>
+                <li>
+                    <input type="checkbox" id="cb1-1" />
+                    <label for="cb1-1"></label>
+                    @Html.ActionLink("subItem1", "Index", "Home")
+                </li>
+            </ul>*@
+    </li>
+    <li>
+        <input type="checkbox" id="cb2" />
+        <label for="cb2"></label>
+        <a href="/About">About</a>
+    </li>
+    <li>
+        <input type="checkbox" id="cb3" />
+        <label for="cb3"></label>
+        <a href="/Contact">Contact</a>
+    </li>
+</ul>
+<script>
+    var fileName = location.href.split("/").slice(-1)[0];
+    if (fileName == "") fileName = "home";
+
+    var menuLabels = document.querySelectorAll(".tree-items label");
+    for (var i = 0, len = menuLabels.length; i < len; i++) {
+        var submenu = menuLabels[i].nextElementSibling.nextElementSibling;
+        menuLabels[i].style.visibility = 'hidden';
+        if (submenu != null && submenu.tagName == 'UL') menuLabels[i].style.visibility = 'visible';
+
+        //highlight current menu
+        var anchor = menuLabels[i].nextElementSibling;
+        if (anchor.textContent.toLowerCase() == fileName.toLowerCase()) anchor.classList.add("selected-item"); //anchor.style.color = "#49ad8e";
+    }
+</script>
